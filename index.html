@@ -7,47 +7,58 @@
     <meta name="keywords" content="business growth, strategic investment, mergers, corporate consulting, digital transformation">
 <!-- ADD META TAG FOR AUTHOR AND YOUR NAME-->
     <title>Vanguard | Leading the Future of Success</title>
+    <meta name="author" content="Gwynn Spragg">
 <!-- ADD LINK TO YOUR CSS-->
+ <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 <!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
-    Vaanguard
-        Main Navigation
-            About
-            Services
-            Contact
+    <h1>Vaanguard</h1>
+        <h2>Main Navigation</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        <h2>Innovation & Investment</h2>
+        <p>We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.
+        Request a Consultation</p>
 
-        Innovation & Investment
-        We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.
-        Request a Consultation
+        <h2>Our Expertise. Your Edge.</h2>
+        <p>We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'</p>
 
-        Our Expertise. Your Edge.
-        We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'
+        <h2>What We Offer</h2>
+            <h3>Strategic Growth Consulting</h3>
+            <p>Unlock new revenue streams and optimize market expansion strategies.</p>
 
-        What We Offer
-            Strategic Growth Consulting
-            Unlock new revenue streams and optimize market expansion strategies.
+           <h3>High-Impact Investment Solutions</h3>
+            <p>Maximize returns with data-driven portfolio management.</p>
 
-            High-Impact Investment Solutions
-            Maximize returns with data-driven portfolio management.
+            <h3>Business Acceleration & Mergers</h3>
+            <p>Identify opportunities for rapid growth and high-value acquisitions.</p>
 
-            Business Acceleration & Mergers
-            Identify opportunities for rapid growth and high-value acquisitions.
+            <h3>Digital Transformation</h3>
+            <p>Stay at the forefront of industry advancements with AI, blockchain, and automation.</p>
 
-            Digital Transformation
-            Stay at the forefront of industry advancements with AI, blockchain, and automation.
+            <h3>Exclusive Executive Advisory Services</h3>
+            <p>Personalized insights and leadership support for C-suite executives and high-net-worth investors.</p>
 
-            Exclusive Executive Advisory Services
-            Personalized insights and leadership support for C-suite executives and high-net-worth investors.
+            <h3>Corporate Innovation</h3>
+            <p>Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.</p>
 
-            Corporate Innovation
-            Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.
+            <h2>Proven Results</h2>
+            <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
 
-            Proven Results
-            Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.
-
-                Profits
+                <h3>Profits</h3>
                 Year
                 Revenue ($M)
                 Growth (%)
@@ -72,7 +83,7 @@
                 $420M
                 100%
 
-                Growth
+                <h3>Growth</h3>
 <!-- CODE PROVIDED FOR YOU, NOTHING TO DO FOR THE BAR CHART IN THE HTML-->
                     <div  id="bar-chart">
                         <div class="bar" data-year="2020" style="--height: 30%;"></div>
@@ -82,21 +93,36 @@
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
                     </div>
 
-        Contact Us
-        Want to take your business to the next level? Get in touch with our elite team today.
-
-            Full Name
-
-            Email Address
-
-            Company Name
-
-            Industry
-
-            How can we help you?
-
-            Submit
-
-        For educational purposes only. 
+        <h2>Contact Us</h2>
+        <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
+        <form method="get">
+            <!-- full Name -->
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName">
+            <!-- Email Address -->
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email">
+            <!-- Company Name -->
+            <label for="company">Company Name</label>
+            <input type="text" name="company" id="company">
+            <!-- Industry -->
+            <label for="industry">Industry</label>
+            <input type="text" name="industry" id="industry">
+            <!-- How can we help you? -->
+                <label for="help">How can we help you?</label>
+            <input type="text" name="help" id="help">
+            <!-- form submit button -->
+            <input type="submit" value="Submit">
+        </form>
+        <footer>
+        <!-- For educational purposes only. 
         Email: info@vaanguard.com 
-        Phone: 480.123.4567
+        Phone: 480.123.4567 -->
+        <p>For educational purposes only.</p>
+        <address>
+            Email:<a href="mailto:info@vaanguard.com"> info@vaanguard.com</a>
+            <p>Phone: 480.123.4567</p>
+        </address>
+        </footer>
+    </body>  
+</html>
