@@ -251,6 +251,7 @@ h1{
     color: var(--white);
     background-color: var(--blue);
     padding: 30px 0 10px;
+    align-content: center;
 }
 
 #results h2, #results h3 {
@@ -266,6 +267,30 @@ h1{
 
 /* results table section */
 
+.results-container {
+    justify-self: center;
+}
+.results-table {
+    background-color: var(--black);
+    width: auto;
+    height: 5rem;
+}
+
+th {
+ font-weight: bold;
+ white-space: nowrap;
+}
+
+th, td, tr{
+    font-size: 13px;
+    border: 1px solid var(--charcoal);
+    padding: 10px 50px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--charcoal);
+}
 
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -313,6 +338,13 @@ h1{
     animation: stepUp 1s ease-in-out forwards;
 }
 
+/* contact section */
+#contact, footer {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* footer section */
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
