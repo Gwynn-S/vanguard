@@ -64,8 +64,10 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
-/* header */
+*, p, h1, h2, h3 {
+    font-family: var(--font);
+}
+/* header section */
 
 nav::after {
     content: '';
@@ -100,6 +102,7 @@ nav h2 {
 nav li a {
     display: block;
     font-family: var(--font);
+    color: var(--white);
     font-size: 1.5rem;
     text-decoration: none;
     padding: 1rem;
@@ -112,6 +115,8 @@ label {
     float: right;
     padding: 1.5rem;
     user-select: none;
+    
+    margin-bottom: 30px;
 }
 
 label span {
@@ -146,13 +151,23 @@ label span::after {
 nav input:checked ~ ul {
     max-height: 500px;
 }
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+  #logo{
+    content: "";
+    margin-left: 20px;
+    left:-.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+}
 
 h1{
     color: var(--blue);
     font-weight: bolder;
     font-size: xx-large;
     position: absolute;
-    left: 28px;
+    padding: 10px;
+    left: 5rem;
 }
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
@@ -163,8 +178,9 @@ h1{
     margin: 0 auto;
 }
 
+/* hero section */
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- #hero{
+ #hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -172,18 +188,46 @@ h1{
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    color: var(--white);
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- h1{
-    content: "";
-    
-    left:-.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
+#hero h2 {
+    margin-bottom: 25px;
+    font-size: 33px;
+    font-weight: 900;
 }
+
+#hero p {
+    line-height: 2rem;
+    margin-bottom: 45px;
+    font-size: 24px;
+}
+
+.button {
+    font-size: x-large;
+    font-weight: bolder;
+    color: var(--white);
+    background-color: var(--blue);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* about and offers section */
+#services section {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 20px 0;
+}
+
+#services section h3 {
+    font-size: 20px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
