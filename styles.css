@@ -212,13 +212,27 @@ h1{
     border-radius: 10px;
     padding: 20px;
 }
-/* about and offers section */
+
+/* about section */
+#about {
+    color: var(--black);
+    line-height: 1.5rem;
+}
+
+#about h2, #services h2 {
+    font-size: 22px;
+    font-weight: 800;
+    padding: 30px 0;
+}
+
+/* services section */
 #services section {
     background-color: var(--blue);
     color: var(--white);
     border-radius: 15px;
     margin: 10px 0;
     padding: 20px 0;
+    line-height: 1.5rem;
 }
 
 #services section h3 {
