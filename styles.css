@@ -64,360 +64,432 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-*, p, h1, h2, h3, label, a {
-    font-family: var(--font);
-}
-/* header section */
+@media screen and (min-width: 400px) {
+    *, p, h1, h2, h3, label, a {
+        font-family: var(--font);
+    }
+    /* header section */
 
-nav::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 15px;
-    background: var(--blue);
-    box-shadow: 0 5px 5px var(--blue) inset;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(36,36,36,0) 100%) ;
-}
-header {
-    background-color: var(--black);
-}
+    nav::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        background: var(--blue);
+        box-shadow: 0 5px 5px var(--blue) inset;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(36,36,36,0) 100%) ;
+    }
+    header {
+        background-color: var(--black);
+    }
 
-nav ul {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    text-align: center;
-    overflow: hidden;
-    max-height: 0;
-    border-bottom: 1px solid var(--black);
-    
-}
+    nav ul {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        text-align: center;
+        overflow: hidden;
+        max-height: 0;
+        border-bottom: 1px solid var(--black);
+        
+    }
 
-nav h2 {
-    visibility: hidden;
-    height: 1px;
-}
+    nav h2 {
+        visibility: hidden;
+        height: 1px;
+    }
 
-nav li a {
-    display: block;
-    font-family: var(--font);
-    color: var(--white);
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 1rem;
-    
-}
+    nav li a {
+        display: block;
+        font-family: var(--font);
+        color: var(--white);
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 1rem;
+        
+    }
 
-label {
-    cursor: pointer;
-    display: block;
-    float: right;
-    padding: 1.5rem;
-    user-select: none;
-    
-    margin-bottom: 30px;
-}
+    label {
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 1.5rem;
+        user-select: none;
+        
+        margin-bottom: 30px;
+    }
 
-label span {
-    background-color: var(--white);
-    display: block;
-    height: .25rem;
-    position: relative;
-    width: 2rem;
-}
+    label span {
+        background-color: var(--white);
+        display: block;
+        height: .25rem;
+        position: relative;
+        width: 2rem;
+    }
 
-label span::before, label span::after {
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
+    label span::before, label span::after {
+        background: var(--white);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
 
-label span::before {
-    top: 0.75rem;
-}
+    label span::before {
+        top: 0.75rem;
+    }
 
-label span::after {
-    top: -0.75rem;
-}
+    label span::after {
+        top: -0.75rem;
+    }
 
- nav input {
-    display: none;
-}
+    nav input {
+        display: none;
+    }
 
-nav input:checked ~ ul {
-    max-height: 500px;
-}
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
-  #logo{
-    content: "";
-    margin-left: 20px;
-    left:-.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-}
+    nav input:checked ~ ul {
+        max-height: 500px;
+    }
+    /* ADD FLOATING SVG LOGO BEFORE THE H1 */
+    #logo{
+        content: "";
+        margin-left: 20px;
+        left:-.5rem;
+        width: 3.75rem;
+        height: 3.75rem;
+        background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    }
 
-h1{
-    color: var(--blue);
-    font-weight: bolder;
-    font-size: xx-large;
-    position: absolute;
-    padding: 10px;
-    left: 5rem;
-}
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+    h1{
+        color: var(--blue);
+        font-weight: bolder;
+        font-size: xx-large;
+        position: absolute;
+        padding: 10px;
+        left: 5rem;
+    }
+    /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
-.container {
-    width: 90%;
-    min-width: 400px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+    .container, #grid_container {
+        width: 90%;
+        min-width: 400px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-/* hero section */
-/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 1rem;
-    overflow: hidden;
-    color: var(--white);
-}
+    /* hero section */
+    /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
+    #hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+        height: 80vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        color: var(--white);
+    }
 
-#hero h2 {
-    margin-bottom: 25px;
-    font-size: 33px;
-    font-weight: 900;
-}
+    #hero h2 {
+        margin-bottom: 25px;
+        font-size: 33px;
+        font-weight: 900;
+    }
 
-#hero p {
-    line-height: 2rem;
-    margin-bottom: 45px;
-    font-size: 24px;
-}
+    #hero p {
+        line-height: 2rem;
+        margin-bottom: 45px;
+        font-size: 24px;
+    }
 
-.button {
-    font-size: x-large;
-    font-weight: bolder;
-    color: var(--white);
-    background-color: var(--blue);
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 20px;
-}
+    .button {
+        font-size: x-large;
+        font-weight: bolder;
+        color: var(--white);
+        background-color: var(--blue);
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 20px;
+    }
 
-/* about section */
-#about {
-    color: var(--black);
-    line-height: 1.5rem;
-    padding-top: 15px;
-}
+    /* about section */
+    #about {
+        color: var(--black);
+        line-height: 1.5rem;
+        padding-top: 15px;
+    }
 
-#about h2, #services h2 {
-    font-size: 22px;
-    font-weight: 800;
-    padding: 30px 0;
-}
+    #about h2, #services h2 {
+        font-size: 22px;
+        font-weight: 800;
+        padding: 30px 0;
+    }
 
-/* services section */
-#services {
-    padding-bottom: 50px;
-}
+    /* services section */
+    #services {
+        padding-bottom: 50px;
+    }
 
-#services section {
-    background-color: var(--blue);
-    color: var(--white);
-    border-radius: 15px;
-    margin: 10px 0;
-    padding: 20px 0;
-    line-height: 1.5rem;
-}
+    #services section {
+        background-color: var(--blue);
+        color: var(--white);
+        border-radius: 15px;
+        margin: 10px 0;
+        padding: 20px 0;
+        line-height: 1.5rem;
+    }
 
-#services section h3 {
-    font-size: 20px;
-    font-weight: 800;
-    padding-bottom: 20px;
-}
+    #services section h3 {
+        font-size: 20px;
+        font-weight: 800;
+        padding-bottom: 20px;
+    }
 
-/* Proven results and profits sections */
-#results, #results section, #growth {
-    color: var(--white);
-    background-color: var(--blue);
-    padding: 30px 0 10px;
-    align-content: center;
-}
+    /* Proven results and profits sections */
+    #results, #results section, #growth {
+        color: var(--white);
+        background-color: var(--blue);
+        padding: 30px 0 10px;
+        align-content: center;
+    }
 
-#results h2, #results h3 {
-    font-weight: 800;
-    font-size: 25px;
-    padding-bottom: 20px;
-}
+    #results h2, #results h3 {
+        font-weight: 800;
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
 
-#results p {
-    font-size: 18px;
-    line-height: 1.5rem;
-}
+    #results p {
+        font-size: 18px;
+        line-height: 1.5rem;
+    }
 
-/* results table section */
+    /* results table section */
 
-.results-container {
-    justify-self: center;
-}
-.results-table {
-    background-color: var(--black);
-    width: auto;
-    height: 5rem;
-}
+    .results-container {
+        justify-self: center;
+    }
+    .results-table {
+        background-color: var(--black);
+        width: auto;
+        height: 5rem;
+    }
 
-th {
- font-weight: bold;
- white-space: nowrap;
-}
-
-th, td, tr{
-    font-size: 13px;
-    border: 1px solid var(--charcoal);
-    padding: 10px 50px;
-    text-align: center;
-}
-
-tbody tr:nth-child(even) {
-    background-color: var(--charcoal);
-}
-
-/* THIS ONE IS DONE FOR YOU */
-#bar-chart {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: flex-end;
-    justify-content: space-around;
-    gap: 1rem;
-    height: 300px;
-    width: 100%;
-    max-width: 800px;
-    padding: 1rem;
-    position: relative;
-}
-/* ADD ON TRANSITION ON HEIGHT */
-.bar {
-    width: 50px;
-    background: var(--charcoal);
-    border-radius: 10px;
-    position: relative;
-    transition:ease-in-out;
-    height: 0;
-}
-/* THIS ONE IS DONE FOR YOU */
-.bar::after {
-    content: attr(data-year);
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1rem;
+    th {
     font-weight: bold;
-    color: var(--white);
-}
-@keyframes stepUp {
-    0% {
+    white-space: nowrap;
+    }
+
+    th, td, tr{
+        font-size: 13px;
+        border: 1px solid var(--charcoal);
+        padding: 10px 50px;
+        text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: var(--charcoal);
+    }
+
+    /* THIS ONE IS DONE FOR YOU */
+    #bar-chart {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: flex-end;
+        justify-content: space-around;
+        gap: 1rem;
+        height: 300px;
+        width: 100%;
+        max-width: 800px;
+        padding: 1rem;
+        position: relative;
+    }
+    /* ADD ON TRANSITION ON HEIGHT */
+    .bar {
+        width: 50px;
+        background: var(--charcoal);
+        border-radius: 10px;
+        position: relative;
+        transition:ease-in-out;
         height: 0;
     }
-    100% {
-        height: var(--height);
+    /* THIS ONE IS DONE FOR YOU */
+    .bar::after {
+        content: attr(data-year);
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--white);
     }
-}
-/* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
-.bar {
-    animation: stepUp 1s ease-in-out forwards;
-}
+    @keyframes stepUp {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: var(--height);
+        }
+    }
+    /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
+    .bar {
+        animation: stepUp 1s ease-in-out forwards;
+    }
 
-/* contact section */
-#contact, footer {
-    background-color: var(--black);
-    color: var(--white);
-}
+    /* contact section */
+    #contact, footer {
+        background-color: var(--black);
+        color: var(--white);
+    }
 
-#contact h2 {
-    padding-top: 35px;
-    padding-bottom: 20px;
-    font-weight: 600;
-    font-size: 22px;
-}
+    #contact h2 {
+        padding-top: 35px;
+        padding-bottom: 20px;
+        font-weight: 600;
+        font-size: 22px;
+    }
 
-#contact p {
-    line-height: 1.25rem;
-    font-size: 14px;
-    margin-right: 20px;
-    width: 70%;
-    padding-bottom: 15px;
-}
+    #contact p {
+        line-height: 1.25rem;
+        font-size: 14px;
+        margin-right: 20px;
+        width: 70%;
+        padding-bottom: 15px;
+    }
 
-#contact .container {
-    justify-content: center;
-}
+    #contact .container {
+        justify-content: center;
+    }
 
-#contact label {
-    display: inline-block;
-    text-align: left;
-    width: 100%;
-    padding: 0 0 3px 5px;
-    margin-bottom: 0;
-    font-size: .75em;
-}
+    #contact label {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        padding: 0 0 3px 5px;
+        margin-bottom: 0;
+        font-size: .75em;
+    }
 
-input[type=text], input[type=email], textarea {
-    box-sizing: border-box;
-    width: 100%;
-    height: 35px;
-    padding: 0 0 10px 0;
-    margin-bottom: 15px;
-    border: 2px solid var(--blue);
-}
+    input[type=text], input[type=email], textarea {
+        box-sizing: border-box;
+        width: 100%;
+        height: 35px;
+        padding: 0 0 10px 0;
+        margin-bottom: 15px;
+        border: 2px solid var(--blue);
+    }
 
-textarea {
-    height: 90px;
-}
+    textarea {
+        height: 90px;
+    }
 
-input[type=submit] {
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    color: var(--white);
-    background-color: var(--blue);
-    border: none;
-    border-radius: 10px;
-    padding: 10px 10px 30px 10px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-    
-}
+    input[type=submit] {
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        color: var(--white);
+        background-color: var(--blue);
+        border: none;
+        border-radius: 10px;
+        padding: 10px 10px 30px 10px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+        
+    }
 
-/* footer section */
-footer {
-    text-align: center;
-    font-size: small;
-    line-height: 1.25rem;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
+    /* footer section */
+    footer {
+        text-align: center;
+        font-size: small;
+        line-height: 1.25rem;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
 
-address a {
-    color: var(--blue);
+    address a {
+        color: var(--blue);
+    }
 }
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width: 800px) {
-/* services section */
+    /* nav */
+    
+    nav ul {
+        position: absolute;
+        top: 10px;
+        height: 40px;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
 
-/* results section */
+    nav li a {
+        color: var(--blue);
+        font-weight: 700;
+    }
+
+    header label {
+        visibility: hidden;
+    }
+
+    header, main, footer { 
+        width: auto;
+    }
+    #hero {
+        width: 96.8%;
+    }
+    /* services section */
+    #services {
+        padding: 0 20px;
+    }
+
+    #grid_container{
+        display: grid;
+        grid-template-areas: 
+        "sec_title sec_title"
+        "strategic high-impact"
+        "mergers transform"
+        "advisory innovation";
+        justify-content: space-evenly;
+        gap: 15px;
+        padding-bottom: 60px;
+    }
+
+    #services p, #services h3 {
+        padding: 20px;
+    }
+
+    #sec_title {
+        grid-area: sec_title;
+    }
+
+    #strategic {
+        grid-area: strategic;
+    }
+
+    #high-impact {
+        grid-area: high-impact;
+    }
+
+    #transform {
+        grid-area: transform;
+    }
+
+    #advisory {
+        grid-area: advisory;
+    }
+
+    #innovation {
+        grid-area: innovation;
+    }
+    /* results section */
     #results h2{
         width: auto;
         grid-area: sec_h2;
@@ -456,5 +528,35 @@ address a {
 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1024px) {
-    
+    #grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+         grid-template-areas: 
+        "sec_title sec_title sec_title"
+        "strategic high-impact mergers"
+        "transform advisory innovation";
+    }
+     #sec_title {
+        grid-area: sec_title;
+    }
+
+    #strategic {
+        grid-area: strategic;
+    }
+
+    #high-impact {
+        grid-area: high-impact;
+    }
+
+    #transform {
+        grid-area: transform;
+    }
+
+    #advisory {
+        grid-area: advisory;
+    }
+
+    #innovation {
+        grid-area: innovation;
+    }
 }
