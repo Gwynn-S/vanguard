@@ -174,6 +174,7 @@ h1{
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
+    min-width: 400px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -413,20 +414,47 @@ address a {
     color: var(--blue);
 }
 /* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width: 800px) {
+/* services section */
 
-    #results {
-        grid-template-columns: 1fr 1fr;
+/* results section */
+    #results h2{
+        width: auto;
+        grid-area: sec_h2;
+    } 
+
+    #results p {
+        width: auto;
+        grid-area: para;
     }
+
+    #profits {
+       display: flex;
+    }
+
+    #growth {
+        grid-area: growth;
+    }
+  
     .results-container {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+        
+        
     }
     .results-table {
         width: 50%;
+        height:90%;
     }
     .bar-chart {
         width: 50%;
     }
+}
+    
 
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1024px) {
+    
+}
