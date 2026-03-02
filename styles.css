@@ -460,6 +460,7 @@ table {
         justify-content: space-evenly;
         gap: 15px;
         padding-bottom: 60px;
+        
     }
 
     #services p, #services h3 {
@@ -468,6 +469,7 @@ table {
 
     #sec_title {
         grid-area: sec_title;
+        min-width: 400px;
     }
 
     #strategic {
@@ -528,13 +530,17 @@ table {
 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1024px) {
-    #grid-container {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-         grid-template-areas: 
+    #grid_container {
+        display: grid;
+        grid-template-areas: 
         "sec_title sec_title sec_title"
         "strategic high-impact mergers"
         "transform advisory innovation";
+        justify-content: space-around;
+        width: 90%;
+        min-width: 400px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
      #sec_title {
         grid-area: sec_title;
@@ -558,5 +564,38 @@ table {
 
     #innovation {
         grid-area: innovation;
+    }
+    /* contact section */
+    #contact .container form {
+        display: grid;
+        grid-template-areas:
+        "upper_left upper_right"
+        "middle_left middle_right"
+        "lower_left lower_right";
+        justify-content: space-evenly;
+    }
+
+    #upper_left  {
+        grid-area: upper_left;
+    }
+
+    #upper_right  {
+        grid-area: upper_right;
+    }
+
+    #middle_left  {
+        grid-area: middle_left;
+    }
+
+    #middle_right {
+        grid-area: middle_right;
+    }
+
+    #lower_left {
+        grid-area: lower_left;
+    }
+
+    #lower_right {
+        grid-area: lower_right;
     }
 }
